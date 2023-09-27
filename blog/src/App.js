@@ -9,6 +9,7 @@ let [글제목, 글제목변경] = useState(['남자 코트 추천','강남 우�
 let [따봉, 따봉변경] = useState([0,0,0]);
 let [modal, setModal] = useState(false);
 let [title,setTitle] = useState(0);
+let [입력값,입력값변경] = useState('');
 
   return (
     <div className="App">
@@ -47,7 +48,8 @@ let [title,setTitle] = useState(0);
           return (
             <div className="list" key={i}>
               <h4 onClick={()=>{setModal(!modal); setTitle(i)}}>{ 글제목[i] }
-                <span onClick={()=>{ 
+                <span onClick={(e)=>{ 
+                  e.stopPropagation();
                   let copy = [...따봉];
                   copy[i] = copy[i] + 1;
                   따봉변경(copy) 
@@ -59,9 +61,8 @@ let [title,setTitle] = useState(0);
         })
       }
 
-      {/* <button onClick={()=>{setTitle(0)}}>글제목0</button>
-      <button onClick={()=>{setTitle(1)}}>글제목1</button>
-      <button onClick={()=>{setTitle(2)}}>글제목2</button> */}
+      <input onChange={(e)=>{입력값변경(e.target.value); console.log(입력값);}} />
+      <button>글 발행</button>
 
       {
         modal == true ? <Modal 글제목={글제목} title={title}/> : null
