@@ -56,13 +56,24 @@ let [입력값,입력값변경] = useState('');
                 }}>👍</span> {따봉[i]}
               </h4>
               <p>2월 17일 발행</p>
+
+              <button onClick={()=>{
+                let copy = [...글제목];
+                copy.splice(i,1);
+                글제목변경(copy);
+              }}>삭제</button>
             </div>
           )
         })
       }
 
       <input onChange={(e)=>{입력값변경(e.target.value); console.log(입력값);}} />
-      <button>글 발행</button>
+      
+      <button onClick={()=>{
+        let copy = [...글제목];
+        copy.unshift(입력값);
+        글제목변경(copy);
+      }}>글 발행</button>
 
       {
         modal == true ? <Modal 글제목={글제목} title={title}/> : null
