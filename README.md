@@ -21,14 +21,14 @@ Part 1 : 블로그 제작 & 기초 문법
 
 ☑️ map : 많은 div들을 반복문으로 줄이고 싶은 충동이 들 때		
 
-자식이 부모의 state 가져다쓰고 싶을 때는 props		
+☑️ 자식이 부모의 state 가져다쓰고 싶을 때는 props		
 
-props를 응용한 상세페이지 만들기		
+☑️ props를 응용한 상세페이지 만들기		
 
-input 1 : 사용자가 입력한 글 다루기		
+☑️ input 1 : 사용자가 입력한 글 다루기		
 
-input 다루기 2 : 블로그 글발행 기능 만들기	
+☑️ input 다루기 2 : 블로그 글발행 기능 만들기	
 
-class를 이용한 옛날 React 문법		
+☑️ class를 이용한 옛날 React 문법		
 
-만든 리액트 사이트 build & Github Pages로 배포해보기
+☑️ 만든 리액트 사이트 build & Github Pages로 배포해보기
